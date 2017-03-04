@@ -16,17 +16,37 @@ class ShowStarViewController: UIViewController {
     @IBOutlet weak var Star: UILabel!
     
     @IBAction func Save(_ sender: UIButton) {
-        let defaults = UserDefaults.standard
-        defaults.set(gettedStar, forKey: "gettedStarOld")
+        let alert: UIAlertController = UIAlertController(title: "ポイントを次回以降お使いですか？", message: "YESを押すと、ポイントを貯めることができます！", preferredStyle: UIAlertControllerStyle.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler: {action in self.OK()})
+        
+        let cancelAction: UIAlertAction = UIAlertAction (title: "NO", style: UIAlertActionStyle.cancel, handler: {
+            (action: UIAlertAction!) -> Void in
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        present(alert, animated: true, completion: nil)
     }
-    
     
     
     @IBAction func Use(_ sender: UIButton) {
-        gettedStar = 0
-        let defaults = UserDefaults.standard
-        defaults.set(gettedStar, forKey: "gettedStarOld")
+        let alert: UIAlertController = UIAlertController(title: "ポイントを使いますか？", message: "YESを押すと、ポイントを使うことができます！", preferredStyle: UIAlertControllerStyle.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler: {action in self.USEOK()})
+        
+        let cancelAction: UIAlertAction = UIAlertAction (title: "NO", style: UIAlertActionStyle.cancel, handler: {
+            (action: UIAlertAction!) -> Void in
+        })
+        
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        
+        present(alert, animated: true, completion: nil)
+
     }
+    
+    @IBOutlet weak var Choose: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +76,26 @@ class ShowStarViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func OK() {
+        self.performSegue(withIdentifier: "OK", sender: nil)
+        let defaults = UserDefaults.standard
+        defaults.set(gettedStar, forKey: "gettedStarOld")
     }
-    */
+    
+    func USEOK() {
+        self.performSegue(withIdentifier: "USEOK", sender: nil)
+        gettedStar -= 1
+        let defaults = UserDefaults.standard
+        defaults.set(gettedStar, forKey: "gettedStarOld")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "USEOK" {
+            
+        var FViewController = segue.destination as! Finish2ViewController
+            FViewController.StarShow = gettedStar
+
+        }
+    }
 
 }

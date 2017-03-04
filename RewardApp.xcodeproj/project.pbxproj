@@ -16,6 +16,16 @@
 		D45496301E59440D00FBAF1A /* RewardAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454962F1E59440D00FBAF1A /* RewardAppUITests.swift */; };
 		D454963E1E599E9000FBAF1A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454963D1E599E9000FBAF1A /* TimerViewController.swift */; };
 		D45496401E59B35F00FBAF1A /* ShowStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D454963F1E59B35F00FBAF1A /* ShowStarViewController.swift */; };
+		D45496421E5B0DD300FBAF1A /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496411E5B0DD300FBAF1A /* MainTableViewController.swift */; };
+		D45496441E5B255B00FBAF1A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496431E5B255B00FBAF1A /* TableViewCell.swift */; };
+		D45496461E5B25C400FBAF1A /* CoffeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496451E5B25C400FBAF1A /* CoffeeTableViewCell.swift */; };
+		D45496481E5B25D900FBAF1A /* EspressoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496471E5B25D900FBAF1A /* EspressoTableViewController.swift */; };
+		D45496511E5B2B4400FBAF1A /* 122722.png in Resources */ = {isa = PBXBuildFile; fileRef = D454964D1E5B2B4400FBAF1A /* 122722.png */; };
+		D45496521E5B2B4400FBAF1A /* 130366.png in Resources */ = {isa = PBXBuildFile; fileRef = D454964E1E5B2B4400FBAF1A /* 130366.png */; };
+		D45496531E5B2B4400FBAF1A /* 121904.png in Resources */ = {isa = PBXBuildFile; fileRef = D454964F1E5B2B4400FBAF1A /* 121904.png */; };
+		D45496541E5B2B4400FBAF1A /* 117472.png in Resources */ = {isa = PBXBuildFile; fileRef = D45496501E5B2B4400FBAF1A /* 117472.png */; };
+		D45496561E5C5B4F00FBAF1A /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496551E5C5B4F00FBAF1A /* FinishViewController.swift */; };
+		D45496581E5C5CF900FBAF1A /* Finish2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45496571E5C5CF900FBAF1A /* Finish2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,16 @@
 		D45496311E59440D00FBAF1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D454963D1E599E9000FBAF1A /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D454963F1E59B35F00FBAF1A /* ShowStarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowStarViewController.swift; sourceTree = "<group>"; };
+		D45496411E5B0DD300FBAF1A /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D45496431E5B255B00FBAF1A /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D45496451E5B25C400FBAF1A /* CoffeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeTableViewCell.swift; sourceTree = "<group>"; };
+		D45496471E5B25D900FBAF1A /* EspressoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EspressoTableViewController.swift; sourceTree = "<group>"; };
+		D454964D1E5B2B4400FBAF1A /* 122722.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 122722.png; sourceTree = "<group>"; };
+		D454964E1E5B2B4400FBAF1A /* 130366.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 130366.png; sourceTree = "<group>"; };
+		D454964F1E5B2B4400FBAF1A /* 121904.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 121904.png; sourceTree = "<group>"; };
+		D45496501E5B2B4400FBAF1A /* 117472.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 117472.png; sourceTree = "<group>"; };
+		D45496551E5C5B4F00FBAF1A /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		D45496571E5C5CF900FBAF1A /* Finish2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finish2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +124,20 @@
 				D454960F1E59440D00FBAF1A /* AppDelegate.swift */,
 				D45496111E59440D00FBAF1A /* ViewController.swift */,
 				D454963D1E599E9000FBAF1A /* TimerViewController.swift */,
-				D45496131E59440D00FBAF1A /* Main.storyboard */,
 				D454963F1E59B35F00FBAF1A /* ShowStarViewController.swift */,
+				D45496131E59440D00FBAF1A /* Main.storyboard */,
+				D45496551E5C5B4F00FBAF1A /* FinishViewController.swift */,
+				D45496571E5C5CF900FBAF1A /* Finish2ViewController.swift */,
+				D45496411E5B0DD300FBAF1A /* MainTableViewController.swift */,
 				D45496161E59440D00FBAF1A /* Assets.xcassets */,
+				D45496431E5B255B00FBAF1A /* TableViewCell.swift */,
+				D45496451E5B25C400FBAF1A /* CoffeeTableViewCell.swift */,
+				D45496471E5B25D900FBAF1A /* EspressoTableViewController.swift */,
 				D45496181E59440D00FBAF1A /* LaunchScreen.storyboard */,
+				D454964D1E5B2B4400FBAF1A /* 122722.png */,
+				D454964E1E5B2B4400FBAF1A /* 130366.png */,
+				D454964F1E5B2B4400FBAF1A /* 121904.png */,
+				D45496501E5B2B4400FBAF1A /* 117472.png */,
 				D454961B1E59440D00FBAF1A /* Info.plist */,
 			);
 			path = RewardApp;
@@ -239,7 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D454961A1E59440D00FBAF1A /* LaunchScreen.storyboard in Resources */,
+				D45496541E5B2B4400FBAF1A /* 117472.png in Resources */,
+				D45496511E5B2B4400FBAF1A /* 122722.png in Resources */,
+				D45496531E5B2B4400FBAF1A /* 121904.png in Resources */,
 				D45496171E59440D00FBAF1A /* Assets.xcassets in Resources */,
+				D45496521E5B2B4400FBAF1A /* 130366.png in Resources */,
 				D45496151E59440D00FBAF1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,8 +301,14 @@
 			files = (
 				D45496121E59440D00FBAF1A /* ViewController.swift in Sources */,
 				D45496401E59B35F00FBAF1A /* ShowStarViewController.swift in Sources */,
+				D45496461E5B25C400FBAF1A /* CoffeeTableViewCell.swift in Sources */,
 				D454963E1E599E9000FBAF1A /* TimerViewController.swift in Sources */,
+				D45496441E5B255B00FBAF1A /* TableViewCell.swift in Sources */,
+				D45496481E5B25D900FBAF1A /* EspressoTableViewController.swift in Sources */,
+				D45496581E5C5CF900FBAF1A /* Finish2ViewController.swift in Sources */,
+				D45496421E5B0DD300FBAF1A /* MainTableViewController.swift in Sources */,
 				D45496101E59440D00FBAF1A /* AppDelegate.swift in Sources */,
+				D45496561E5C5B4F00FBAF1A /* FinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,10 +12,12 @@ class TimerViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView! = nil
     
+    @IBOutlet weak var ActivityView: UIActivityIndicatorView!
+    
     var targetURL = "https://starbucks.amebaownd.com/"
     
     @IBAction func endTimer(_ sender: UIButton) {
-        let alert: UIAlertController = UIAlertController(title: "お席は見つかりましたか？", message: "Yesを押すと、Starがもらえます！", preferredStyle: UIAlertControllerStyle.alert)
+        let alert: UIAlertController = UIAlertController(title: "お席は見つかりましたか？", message: "Yesを押すと、Starがもらえます！まだお席が見つかっていない場合は、NOを押してください。", preferredStyle: UIAlertControllerStyle.alert)
         let defaultAction: UIAlertAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default, handler: {action in self.test()})
         
         let cancelAction: UIAlertAction = UIAlertAction (title: "NO", style: UIAlertActionStyle.cancel, handler: {
@@ -35,6 +37,7 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ActivityView.startAnimating()
         myTimer = Timer.scheduledTimer(timeInterval: 1.0,  target: self, selector: #selector(self.timerUpdate), userInfo: nil, repeats: true)
         myTimer.fire()
         
@@ -51,7 +54,13 @@ class TimerViewController: UIViewController {
     
     func timerUpdate() {
         timeCount -= 1
-        if timeCount < 1 {
+        if timeCount < 3595 {
+            if (ActivityView.isAnimating == true) {
+                ActivityView.stopAnimating()
+            } else {
+                ActivityView.isHidden = true
+            }
+        } else if timeCount < 1 {
             timerStop()
         }
     }
